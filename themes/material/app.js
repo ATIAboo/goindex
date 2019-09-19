@@ -6,7 +6,7 @@ document.write('<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdu
 // 初始化页面，并载入必要资源
 function init(){
     document.siteName = $('title').html();
-    $('body').addClass("mdui-theme-primary-blue mdui-theme-accent-blue ");
+    $('body').addClass("mdui-theme-primary-indigo mdui-theme-accent-blue ");
     var html = `
 <header class="mdui-appbar mdui-color-theme"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
@@ -93,7 +93,7 @@ function list(path){
     $.post(path,'{"password":"'+password+'"}', function(data,status){
         var obj = jQuery.parseJSON(data);
         if(typeof obj != 'null' && obj.hasOwnProperty('error') && obj.error.code == '401'){
-            var pass = prompt("目录加密，请输入密码","");
+            var pass = prompt("目录加密啦，请输入密码","");
             localStorage.setItem('password'+path, pass);
             if(pass != null && pass != ""){
                 list(path);
@@ -214,7 +214,7 @@ function file_code(path){
 <pre id="editor" ></pre>
 </div>
 <div class="mdui-textfield">
-	<label class="mdui-textfield-label">下载地址</label>
+	<label class="mdui-textfield-label">下载地址，直接复制到下载工具即可</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
 <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
@@ -257,7 +257,7 @@ function file_video(path){
 	<br>
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">下载地址，直接复制到下载工具即可</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
