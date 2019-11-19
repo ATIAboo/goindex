@@ -8,7 +8,7 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-deep-purple mdui-color-accent-indigo");
     var html = `
-<header class="mdui-appbar mdui-color-theme-primary-deep-purple"> 
+<header class="mdui-appbar mdui-color-theme"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
    </div> 
 </header>
