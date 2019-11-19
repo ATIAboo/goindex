@@ -6,9 +6,9 @@ document.write('<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdu
 // 初始化页面，并载入必要资源
 function init(){
     document.siteName = $('title').html();
-    $('body').addClass("mdui-theme-primary-Orange mdui-color-accent-indigo ");
+    $('body').addClass("mdui-theme-primary-deep-purple mdui-color-accent-indigo");
     var html = `
-<header class="mdui-appbar mdui-color-theme"> 
+<header class="mdui-appbar mdui-color-theme-primary-deep-purple"> 
    <div id="nav" class="mdui-toolbar mdui-container"> 
    </div> 
 </header>
